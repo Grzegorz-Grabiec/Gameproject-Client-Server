@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Gameservice" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Gameservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGracz">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Gracz" nillable="true" type="tns:Gracz" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGracz" nillable="true" type="tns:ArrayOfGracz" />
+  <xs:complexType name="Gracz">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Kierunek" type="xs:double" />
+      <xs:element minOccurs="0" name="Nick" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="V" type="xs:double" />
+      <xs:element minOccurs="0" name="X" type="xs:int" />
+      <xs:element minOccurs="0" name="Y" type="xs:int" />
+      <xs:element minOccurs="0" name="gaz" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hamluec" type="xs:boolean" />
+      <xs:element minOccurs="0" name="lewo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="prawo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Gracz" nillable="true" type="tns:Gracz" />
+</xs:schema>

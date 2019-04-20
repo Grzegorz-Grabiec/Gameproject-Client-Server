@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.101:8081/Gameservice?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.101:8081/Gameservice?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.101:8081/Gameservice?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Gameservice" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Rejestruj_InputMessage">
+    <wsdl:part name="parameters" element="tns:Rejestruj" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Rejestruj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejestrujResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_idz_InputMessage">
+    <wsdl:part name="parameters" element="tns:idz" />
+  </wsdl:message>
+  <wsdl:message name="IService1_idz_OutputMessage">
+    <wsdl:part name="parameters" element="tns:idzResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gaz_InputMessage">
+    <wsdl:part name="parameters" element="tns:Gaz" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Gaz_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GazResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Dzialaj_InputMessage">
+    <wsdl:part name="parameters" element="tns:Dzialaj" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Dzialaj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DzialajResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaGraczy_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGraczy" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListaGraczy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaGraczyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Rejestruj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Rejestruj" message="tns:IService1_Rejestruj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RejestrujResponse" message="tns:IService1_Rejestruj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="idz">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/idz" message="tns:IService1_idz_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/idzResponse" message="tns:IService1_idz_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Gaz">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Gaz" message="tns:IService1_Gaz_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GazResponse" message="tns:IService1_Gaz_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Dzialaj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Dzialaj" message="tns:IService1_Dzialaj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DzialajResponse" message="tns:IService1_Dzialaj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaGraczy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListaGraczy" message="tns:IService1_ListaGraczy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListaGraczyResponse" message="tns:IService1_ListaGraczy_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Rejestruj">
+      <soap:operation soapAction="http://tempuri.org/IService1/Rejestruj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="idz">
+      <soap:operation soapAction="http://tempuri.org/IService1/idz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Gaz">
+      <soap:operation soapAction="http://tempuri.org/IService1/Gaz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Dzialaj">
+      <soap:operation soapAction="http://tempuri.org/IService1/Dzialaj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaGraczy">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListaGraczy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://192.168.0.101:8081/Gameservice" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

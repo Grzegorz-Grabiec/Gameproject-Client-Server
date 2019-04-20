@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gameservice", "Gameservice\Gameservice.csproj", "{73E3736C-86BB-4ACE-98CD-103F8F3D2722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serwer", "Serwer\Serwer.csproj", "{D34D4455-6974-4EB4-A5DA-573473FCED1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73E3736C-86BB-4ACE-98CD-103F8F3D2722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E3736C-86BB-4ACE-98CD-103F8F3D2722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E3736C-86BB-4ACE-98CD-103F8F3D2722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E3736C-86BB-4ACE-98CD-103F8F3D2722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D34D4455-6974-4EB4-A5DA-573473FCED1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34D4455-6974-4EB4-A5DA-573473FCED1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34D4455-6974-4EB4-A5DA-573473FCED1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34D4455-6974-4EB4-A5DA-573473FCED1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86EC02B2-A306-4B5C-9D83-2720C398669F}
+	EndGlobalSection
+EndGlobal
